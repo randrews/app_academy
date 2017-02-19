@@ -4,6 +4,7 @@
 # Difficulty: easy.
 
 def time_conversion(minutes)
+  return "#{minutes/60}:#{minutes % 60}"
 end
 
 # These are tests to check that your code is working. After writing

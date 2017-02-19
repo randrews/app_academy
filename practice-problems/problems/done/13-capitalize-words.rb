@@ -9,6 +9,7 @@
 # Difficulty: medium.
 
 def capitalize_words(string)
+  return string.split.each.map {|word| word.capitalize }.join(" ")
 end
 
 # These are tests to check that your code is working. After writing

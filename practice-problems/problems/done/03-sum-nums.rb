@@ -4,7 +4,13 @@
 # Difficulty: easy.
 
 def sum_nums(num)
+  sum = 0
+  num.downto(0) do |i|
+    sum += i
+  end
+  return sum
 end
+
 
 # These are tests to check that your code is working. After writing
 # your solution, they should all print true.
