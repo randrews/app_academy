@@ -7,6 +7,12 @@
 # Difficulty: easy.
 
 def longest_word(sentence)
+  longest = ""
+  array = sentence.split(" ")
+  array.each do |word|
+    if word.length > longest.length then longest = word end
+  end
+  return longest
 end
 
 # These are tests to check that your code is working. After writing
