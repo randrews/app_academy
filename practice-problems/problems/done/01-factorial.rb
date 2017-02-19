@@ -5,7 +5,22 @@
 #
 # Difficulty: easy.
 
+# def factorial(n)
+#   if n == 0 || n == 1 then return 1 end
+#   answer = 1
+#   while n > 1
+#     answer *= n
+#     n -= 1
+#   end
+#   return answer
+# end
+
 def factorial(n)
+  if n <= 1
+    return 1
+  else
+    n * factorial(n - 1)
+  end
 end
 
 # These are tests to check that your code is working. After writing
