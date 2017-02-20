@@ -12,8 +12,29 @@
 #
 # Difficulty: medium.
 
+#v.3
 def is_prime?(number)
+  if number <= 1 then return false end
+  2.upto(Math.sqrt(number).floor){ |i| if number % i == 0 then return false end }
+  return true
 end
+
+
+# v.2
+# def is_prime?(number)
+#   2.upto(number/2){ |i| if number % i == 0 then return false end }
+#   return true
+# end
+
+#v.1
+# def is_prime?(number)
+#   2.upto(number/2) do |i|
+#     if number % i == 0
+#       return false
+#     end
+#   end
+#   return true
+# end
 
 # These are tests to check that your code is working. After writing
 # your solution, they should all print true.
