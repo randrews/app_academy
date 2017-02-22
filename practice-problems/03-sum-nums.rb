@@ -4,16 +4,26 @@
 # Difficulty: easy.
 
 def sum_nums(num)
-  result = 0
-
-  i = 0
-  while i <= num
-    result += i
-    i += 1
+  sum = 0
+  num.downto(0) do |i|
+    sum += i
   end
-
-  return result
+  return sum
 end
+
+## their solution
+# def sum_nums(num)
+#   result = 0
+#
+#   i = 0
+#   while i <= num
+#     result += i
+#     i += 1
+#   end
+#
+#   return result
+# end
+
 
 # These are tests to check that your code is working. After writing
 # your solution, they should all print true.

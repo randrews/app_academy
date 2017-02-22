@@ -29,6 +29,33 @@ def caesar_cipher(offset, string)
   return result.map {|int| if int > 122 then ((int % 122) + 96).chr else int.chr end}.join
 end
 
+
+#their solution
+# def caesar_cipher(offset, string)
+#   words = string.split(" ")
+#
+#   word_idx = 0
+#   while word_idx < words.length
+#     word = words[word_idx]
+#
+#     letter_idx = 0
+#     while letter_idx < word.length
+#       char_i = word[letter_idx].ord - "a".ord
+#
+#       new_char_i = (char_i + offset) % 26
+#       word[letter_idx] = ("a".ord + new_char_i).chr
+#
+#       letter_idx += 1
+#     end
+#
+#     word_idx += 1
+#   end
+#
+#   return words.join(" ")
+# end
+
+
+
 # These are tests to check that your code is working. After writing
 # your solution, they should all print true.
 

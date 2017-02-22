@@ -12,6 +12,25 @@ def capitalize_words(string)
   return string.split.each.map {|word| word.capitalize }.join(" ")
 end
 
+
+# their version
+# def capitalize_words(string)
+#   words = string.split(" ")
+#
+#   idx = 0
+#   while idx < words.length
+#     word = words[idx]
+#
+#     word[0] = word[0].upcase
+#
+#     idx += 1
+#   end
+#
+#   return words.join(" ")
+# end
+
+
+
 # These are tests to check that your code is working. After writing
 # your solution, they should all print true.
 

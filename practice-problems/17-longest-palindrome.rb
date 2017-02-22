@@ -16,6 +16,15 @@
 #
 # Difficulty: hard.
 
+def longest_palindrome(string)
+  array = string.chars
+  array.length.downto(1) do |n|
+    result = array.each_cons(n).find { |chunk| chunk == chunk.reverse } #find_all would get all
+    return result.join if result #works because evaluates from right
+  end
+end
+
+# their version (incorporates earlier check for palindrome)
 # def palindrome?(string)
 #   i = 0
 #   while i < string.length
@@ -29,44 +38,27 @@
 #   return true
 # end
 #
-# # uses the previous check for palindrome
 # def longest_palindrome(string)
-#   array = string.chars
+#   best_palindrome = nil
 #
-#   array.length.downto(1) do |n|
+#   idx1 = 0
+#   while idx1 < string.length
+#     length = 1
+#     while (idx1 + length) <= string.length
+#       substring = string.slice(idx1, length)
 #
-#     array.each_cons(n) do |chunk|
-#
-#       if palindrome?(chunk)
-#         return chunk.join
+#       if palindrome?(substring) && (best_palindrome == nil || substring.length > best_palindrome.length)
+#         best_palindrome = substring
 #       end
+#
+#       length += 1
 #     end
+#
+#     idx1 += 1
 #   end
+#
+#   return best_palindrome
 # end
-
-
-# ** checks for palindrome AND returns guaranteed longest
-# def longest_palindrome(string)
-#   array = string.chars
-#   array.length.downto(1) do |n|
-#     result = array.each_cons(n).find { |chunk| chunk == chunk.reverse }
-#     unless result == nil
-#       return result.join
-#     end
-#   end
-# end
-
-# even sweeter -- you can put the test on same line with return, because it
-# evaluates from the right anyhow!!
-def longest_palindrome(string)
-  array = string.chars
-  array.length.downto(1) do |n|
-    result = array.each_cons(n).find { |chunk| chunk == chunk.reverse } #find_all would get all
-    return result.join if result
-  end
-end
-
-# ** doesn't seem to guarantee unique result though if more than one pal of same length
 
 
 # These are tests to check that your code is working. After writing

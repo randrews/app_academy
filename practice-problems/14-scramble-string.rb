@@ -4,17 +4,27 @@
 #
 # Difficulty: medium.
 
+#couldn't init result "" or will be out of index; with [] will pad with nil
 def scramble_string(string, positions)
-  result = ""
-
-  i = 0
-  while i < positions.length
-    result = result + string[positions[i]]
-    i += 1
-  end
-
-  return result
+  result = []
+  positions.each_with_index{ |pos, index| result[index] = string[pos] }
+  return result.join
 end
+
+# their version
+# def scramble_string(string, positions)
+#   result = ""
+#
+#   i = 0
+#   while i < positions.length
+#     result = result + string[positions[i]]
+#     i += 1
+#   end
+#
+#   return result
+# end
+
+
 
 # These are tests to check that your code is working. After writing
 # your solution, they should all print true.

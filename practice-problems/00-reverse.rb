@@ -8,13 +8,26 @@
 def reverse(string)
   reversed_string = ""
   i = 0
-  while i < string.length && string.length > 0
+  while i < string.length && string.length > 0 #unnecessary test?
     reversed_string[i] = string[-(i+1)]
     i +=1
   end
   return reversed_string
 end
 
+## their solution
+# def reverse(string)
+#   reversed_string = ""
+#
+#   i = 0
+#   while i < string.length
+#     reversed_string = string[i] + reversed_string
+#
+#     i += 1
+#   end
+#
+#   return reversed_string
+# end
 
 # These are tests to check that your code is working. After writing
 # your solution, they should all print true.

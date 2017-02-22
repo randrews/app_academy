@@ -5,19 +5,32 @@
 # Difficulty: easy.
 
 def count_vowels(string)
-  num_vowels = 0
-
-  i = 0
-  while i < string.length
-    if (string[i] == "a" || string[i] == "e" || string[i] == "i" || string[i] == "o" || string[i] == "u")
-      num_vowels += 1
+  count = 0
+  string.each_char do |letter|
+    if letter =="a" || letter =="e" || letter =="i" || letter == "o" || letter == "u"
+      count += 1
     end
-
-    i += 1
   end
-
-  return num_vowels
+  return count
 end
+
+
+# their version
+# def count_vowels(string)
+#   num_vowels = 0
+#
+#   i = 0
+#   while i < string.length
+#     if (string[i] == "a" || string[i] == "e" || string[i] == "i" || string[i] == "o" || string[i] == "u")
+#       num_vowels += 1
+#     end
+#
+#     i += 1
+#   end
+#
+#   return num_vowels
+# end
+
 
 # These are tests to check that your code is working. After writing
 # your solution, they should all print true.

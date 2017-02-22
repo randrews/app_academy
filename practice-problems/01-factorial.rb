@@ -5,21 +5,41 @@
 #
 # Difficulty: easy.
 
+#my v.1
+# def factorial(n)
+#   if n == 0 || n == 1 then return 1 end
+#   answer = 1
+#   while n > 1
+#     answer *= n
+#     n -= 1
+#   end
+#   return answer
+# end
+
 def factorial(n)
-  if n < 0
-    return nil
+  if n <= 1
+    return 1
+  else
+    n * factorial(n - 1)
   end
-
-  result = 1
-  while n > 0
-    result = result * n
-
-    n -= 1
-  end
-
-  return result
 end
 
+
+# their solution
+# def factorial(n)
+#   if n < 0
+#     return nil
+#   end
+#
+#   result = 1
+#   while n > 0
+#     result = result * n
+#
+#     n -= 1
+#   end
+#
+#   return result
+# end
 # These are tests to check that your code is working. After writing
 # your solution, they should all print true.
 
