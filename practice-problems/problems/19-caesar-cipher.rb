@@ -23,7 +23,10 @@
 # Difficulty: hard. Because this problem relies on outside
 # information, we would not give it to you on the timed challenge. :-)
 
+
 def caesar_cipher(offset, string)
+  result = string.chars.map { |letter| if (97..122).include?(letter.ord) then letter.ord + offset else letter.ord end }
+  return result.map {|int| if int > 122 then ((int % 122) + 96).chr else int.chr end}.join
 end
 
 # These are tests to check that your code is working. After writing
