@@ -4,11 +4,24 @@
 #
 # Difficulty: medium.
 
-def greatest_common_factor(number1, number2)
+def greatest_common_factor(bigger,smaller)
+
+  unless bigger > smaller
+    tmp = bigger
+    bigger = smaller
+    smaller = tmp
+  end
+  gcf = smaller
+  until bigger % gcf == 0 && smaller % gcf == 0
+    gcf -= 1
+  end
+  return gcf
 end
 
 # These are tests to check that your code is working. After writing
 # your solution, they should all print true.
+
+
 
 puts(
   'greatest_common_factor(3, 9) == 3: ' +
