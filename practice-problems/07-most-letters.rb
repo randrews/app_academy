@@ -27,8 +27,7 @@ end
 
 # ...But let's assume that's cheating. Here's another one:
 def oneline_nearby_az2(str)
-  ((0..(str.size-1)).map { |n| str[n] == 'a' ? [n+1, n+2, n+3] : nil }.compact.flatten & (0..(str.size-1)).map { |n| str[n] == 'z' ? n : nil }.compact).any?
-  # Jesus, I'm sorry for that bit of code vomit...
+  (0..str.size-1).map { |n| str[n] == 'a' ? str[(n+1)..(n+3)] : '' }.join.index('z')
 end
 
 # their version
