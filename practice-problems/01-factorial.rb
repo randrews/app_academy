@@ -24,6 +24,9 @@ def factorial(n)
   end
 end
 
+def oneline_factorial(n)
+  (1..n).inject(&:*)
+end
 
 # their solution
 # def factorial(n)

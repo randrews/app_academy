@@ -7,6 +7,10 @@ def time_conversion(minutes)
   return "#{minutes/60}:#{minutes % 60}"
 end
 
+# It's already one line
+def oneline_time_conversion(minutes)
+  time_conversion(minutes)
+end
 
 # their version
 # def time_conversion(minutes)

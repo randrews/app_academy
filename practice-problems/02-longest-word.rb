@@ -15,6 +15,9 @@ def longest_word(sentence)
   return longest
 end
 
+def oneline_longest_word(str)
+  str.split(' ').max { |a,b| a.size <=> b.size }
+end
 
 # their solution
 # def longest_word(sentence)

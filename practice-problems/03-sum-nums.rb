@@ -11,6 +11,10 @@ def sum_nums(num)
   return sum
 end
 
+def oneline sum_nums(n)
+  (1..n).inject(&:+)
+end
+
 ## their solution
 # def sum_nums(num)
 #   result = 0

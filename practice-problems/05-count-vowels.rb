@@ -14,6 +14,9 @@ def count_vowels(string)
   return count
 end
 
+def oneline_count_vowels(str)
+  str.split('').select { |c| c =~ /[aeoui]/ }.size
+end
 
 # their version
 # def count_vowels(string)

@@ -16,6 +16,9 @@ def palindrome?(string)
     return true
 end
 
+def oneline_palindrome(str)
+  str == str.reverse
+end
 
 #their version
 # def palindrome?(string)

@@ -15,6 +15,10 @@ def reverse(string)
   return reversed_string
 end
 
+def oneline_reverse(str)
+  (0..(str.size-1)).map{|n| str[str.size-n-1]}.join
+end
+
 ## their solution
 # def reverse(string)
 #   reversed_string = ""
